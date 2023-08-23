@@ -1,0 +1,348 @@
+:root {
+  /*Colors */
+
+  /* Primary*/
+  --Light-red: hsl(356, 100%, 66%); /*CTA text*/
+  --Very-light-red: hsl(355, 100%, 74%); /*CTA hover background*/
+  --Very-dark-blue: hsl(208, 49%, 24%); /*headings*/
+
+  /* Neutral*/
+  --White: hsl(0, 0%, 100%); /*text*/
+  --Grayish-blue: hsl(240, 2%, 79%); /*footer text*/
+  --Very-dark-grayish-blue: hsl(207, 13%, 34%); /*body copy*/
+  --Very-dark-black-blue: hsl(240, 10%, 16%); /*footer background*/
+
+  /*Gradient*/
+
+  /*Background gradient - Intro/CTA mobile nav:*/
+  --Very-light-red-gradient: hsl(13, 100%, 72%);
+  --Light-red-gradient: hsl(353, 100%, 62%);
+
+  /*Background gradient - body:*/
+  --Very-dark-gray-blue: hsl(237, 17%, 21%);
+  --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+}
+
+body {
+  font: 300 16px "Overpass", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.general-container {
+  gap: 90px;
+}
+
+header {
+  background-image: url(images/bg-pattern-intro-mobile.svg),
+    linear-gradient(
+      to bottom,
+      var(--Very-light-red-gradient),
+      var(--Light-red-gradient)
+    );
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  background-position: 38% 35%;
+  color: var(--White);
+
+  min-height: 375px;
+
+  height: 90vh;
+
+  border-end-start-radius: 120px;
+}
+
+header #logo {
+  width: 90px;
+}
+
+.nav-scroll {
+  background: linear-gradient(
+    to right,
+    var(--Very-light-red-gradient),
+    var(--Light-red-gradient)
+  );
+}
+
+.header-btn {
+  color: var(--White);
+  font-weight: 600;
+  border: 1px solid var(--White);
+  border-radius: 30px;
+
+  width: 135px;
+}
+
+.header-btn:hover {
+  background-color: var(--White);
+  color: var(--Light-red);
+}
+
+.btn-login {
+  color: var(--White);
+  font: 500 16px "Ubuntu", sans-serif;
+}
+
+.btn-login:hover {
+  color: var(--Very-dark-blue);
+  font: 500 16px "Ubuntu", sans-serif;
+}
+
+.active {
+  background-color: var(--White);
+  color: var(--Light-red);
+}
+
+.inactive:hover {
+  background-color: var(--Light-red);
+  color: var(--White);
+}
+
+header div.style_container {
+  max-width: 600px;
+  width: 90%;
+}
+
+header div h1 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+section .font_color {
+  color: var(--Very-dark-blue);
+  font-weight: 600;
+}
+
+section .font-size {
+  font-size: 30px;
+}
+
+img {
+  width: 100%;
+}
+
+.btn {
+  color: var(--Very-dark-blue);
+  width: 50%;
+}
+
+.btn-active {
+  background: linear-gradient(
+    to right,
+    var(--Very-light-red-gradient),
+    var(--Light-red-gradient)
+  );
+  color: var(--White);
+  font: 500 16px "Ubuntu", sans-serif;
+}
+/*
+.container-btns {
+  width: 200px;
+}*/
+
+.offcanvas.offcanvas-end {
+  width: 300px;
+  height: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 7px 16px 0px #939393;
+  top: 70px;
+  left: 40px;
+  transform: translateY(0%);
+}
+
+.offcanvas {
+  --bs-offcanvas-transition: transform 0.1s ease-in-out; /* Aumenta el tiempo a 0.6 segundos */
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0;
+}
+
+.font-body {
+  font: 600 18px "Overpass", sans-serif;
+  color: var(--Very-dark-blue);
+}
+
+.general-container .section_2 {
+  position: relative;
+  min-height: 575px;
+  height: 900px;
+  overflow: hidden;
+}
+
+.section_2-container {
+  background: linear-gradient(
+    to bottom,
+    var(--Very-dark-gray-blue),
+    var(--Very-dark-desaturated-blue)
+  );
+  color: var(--White);
+
+  border-end-start-radius: 120px;
+  border-top-right-radius: 120px;
+
+  position: absolute;
+  top: 180px;
+
+  width: 100%;
+  height: calc(100% - 180px);
+
+  overflow: hidden;
+}
+
+.bg-pattern-circles {
+  width: 150%;
+  position: relative;
+  top: -200px;
+  left: -98px;
+  z-index: 1;
+}
+
+.general-container .section_2 .img-position {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+}
+
+.container-text {
+  position: absolute;
+  top: 240px;
+  z-index: 10;
+}
+
+.container-text__title {
+  font: 600 30px "Overpass", sans-serif;
+}
+
+footer {
+  background-color: var(--Very-dark-black-blue);
+  color: var(--White);
+  border-top-right-radius: 100px;
+
+  height: 700px;
+}
+
+span {
+  color: var(--Grayish-blue);
+  cursor: pointer;
+  width: max-content;
+}
+
+strong {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 968px) {
+  header {
+    background-image: url(images/bg-pattern-intro-mobile.svg),
+      linear-gradient(
+        to right,
+        var(--Very-light-red-gradient),
+        var(--Light-red-gradient)
+      );
+    background-size: 2500px;
+    background-repeat: no-repeat;
+    background-position: 18% 55%;
+    color: var(--White);
+  }
+
+  .offcanvas.offcanvas-end {
+    box-shadow: none;
+  }
+
+  .btn {
+    color: var(--White);
+    width: 100%;
+  }
+
+  .font-body {
+    font: 300 18px "Overpass", sans-serif;
+    color: var(--White);
+  }
+
+  .font-body:hover {
+    color: var(--White);
+  }
+
+  .dropdown-line {
+    color: white;
+    margin-left: 20px;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s ease;
+  }
+
+  .dropdown-line:hover {
+    border-bottom: 2px solid var(--White);
+    transition: 0.5s;
+  }
+
+  .general-container .section_2 {
+    position: relative;
+    min-height: 575px;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .section_2-container {
+    position: absolute;
+    top: 70px;
+
+    width: 100%;
+    height: calc(100% - 150px);
+
+    overflow: hidden;
+  }
+
+  .general-container .section_2 .img-position {
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    width: 40%;
+    z-index: 100;
+  }
+
+  .container-text {
+    width: 50%;
+    position: absolute;
+    top: 140px;
+    right: 50px;
+    z-index: 10;
+    text-align: left !important;
+  }
+
+  .bg-pattern-circles {
+    width: 80%;
+    position: relative;
+    top: -700px;
+    left: -300px;
+    z-index: 1;
+  }
+
+  footer {
+    height: 400px;
+  }
+
+  footer span {
+    font: 400 16px "Ubuntu", sans-serif;
+    position: relative;
+    cursor: pointer;
+  }
+
+  footer span:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0px; /* Ajusta la distancia de la línea desde el texto */
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--White); /* Color de la línea */
+  }
+
+  strong {
+    cursor: text;
+  }
+}
